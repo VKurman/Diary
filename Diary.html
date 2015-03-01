@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Diary</title>
+	<link rel="stylesheet" href="css/Diary.css" type="text/css" media="screen, projection" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/Diary.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9orD4_FhKfCZ4yGmY4eDxDLW6noL3Sc&sensor=false"></script> -->
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<div id="header">
+		<p id="logo">Diary</p>
+	</div><!-- #header-->
+
+	<div id="content">
+		<!-- <div id="tabs"> -->
+		  
+		  <ul id='menu'>
+		    <li class='format menu' ><a href="#eventAdd" data-menu="#eventAdd1" >Создать событие</a></li>
+		    <li class='format menu' ><a href="#event" data-menu="#event1">Просмотр события</a></li>
+		    <li class='format menu' ><a href="#eventList" data-menu="#eventList1">Список событий</a></li>
+		    <li class='format menu' ><a href="#places" data-menu="#places1">Где я был</a></li>
+		  </ul>
+
+		  <div id="eventAdd1" class="moveaway contentformat">
+		    <form>
+		    	<div >
+		    		<input id="name" type="text" placeholder="Название события" class="eventName">
+		    	</div>
+		    	<div>
+		    		<input type="text" id="datepicker">
+		    		<p class="format formatText">Форматирование текста события</p>
+		    		<div class="format green color" data-color="greenText"></div>
+		    		<div class="format red color" data-color="redText"></div>
+		    		<div class="format blue color" data-color="blueText"></div>
+		    		<div class="format italic formatText1" data-format="italic"><p data-format="italic">К</p></div>
+		    		<div class="format bold formatText1" data-format="bold"><p data-format="bold">Ж</p></div>
+		    		<div class="format underline formatText1" data-format="underline"><p data-format="underline">Ч</p></div>
+		    		<div class="format mood good 1" data-mood="good"></div>
+		    		<div class="format mood anormal 1" data-mood="anormal"></div>
+		    		<div class="format mood abad 1" data-mood="abad"></div>
+		    	</div>
+		    	<div id="ImgVideo"></div>
+		    	<div id="addImgVideo">
+		    	 	<input class="video" type="text" placeholder="Добавить видео" class="addImgVideo">
+		    	 	<input data-video="video" class="video" type="button" value="Прикрепить">
+		    	 	<input class="img" type="text" placeholder="Добавить картинку" class="addImgVideo">
+		    	 	<input data-img="img" class="img" id="buttonvideo" type="button" value="Прикрепить">
+		    	</div>
+
+
+
+
+		    	<div id="eventText1">
+		    		<form>
+		    		<textarea id="eventText" placeholder="Текст события" class=""></textarea>
+		    		<input name="newEvent" type="button" value="Создать событие">
+		    		</form>
+		    	</div>
+
+
+
+
+
+		    	<div id="createEvent">
+		    		<!-- <button>Создать событие</button> -->
+		    	</div>
+		    	<!-- <div id="map_canvas"></div> -->
+
+
+
+
+		    </form>
+		  </div><!-- #event/add-->
+
+
+
+
+		  <div id="event1" class="contentformat moveaway">
+		    <div id="eventHolder">
+
+		    </div>
+		  </div>
+
+
+
+		  <div id="eventList1" class="contentformat moveaway">
+		   	
+		   	<div id="sortList">
+		   		<div class="sort"><input data-sortData='sortData' type="button"  value="Сортировать по дате"></div>
+		   		<div class="sort"><input data-sortMood='sortMood' type="button" value="Сортировать по настроениию"></div>
+		   		<div class="sort">
+		   			<input id='searchName' type="text" placeholder="Поиск по названию" class="search" >
+		   			<input data-searchName='searchName' type="button" value="Искать">
+		   		</div>	
+		   	</div>
+
+		   	<div id='list'>
+		   		<ul id='listHolder'></ul>
+		   	</div>
+			   	
+		  </div>
+
+
+
+	 	  <div id="places1" class="contentformat moveaway"></div>
+		<!-- </div> -->
+
+		
+	</div><!-- #content-->
+
+</div><!-- #wrapper -->
+
+<div id="footer">
+
+
+</div><!-- #footer -->
+
+</body>
+</html>
+	    		  
